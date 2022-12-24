@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import {registerValidation} from "../utils/registerValidation"
 
 const Form = () => {
@@ -18,13 +18,16 @@ const Form = () => {
         if(!registerValidation(values)){
             console.log(values)
         }
+        
+        
     }
+    
 
     return (
         <div>
             <p>{
 
-              errorText ==="" && values.firstName.toUpperCase() + " " + values.lastName.toUpperCase() + "Registered Succesfully!"
+              errorText ==="" && values.firstName.toUpperCase() + " " + values.lastName.toUpperCase() + " " +"Registered Succesfully!"
                 
                 
                 
@@ -83,6 +86,7 @@ const Form = () => {
                 <span style={{fontSize:"1.2rem", paddingLeft:"0.5rem"}}>
                     I accept the{" "} <a href='/' style={{color:"black"}}>Privacy Policy</a>.
                 </span>
+                <p>{errorText.policy}</p>
                 <button type='submit' value="Register">Register</button>
                 <p style={{fontSize:"1rem"}}>Already have an account?
                   <a href='/' style={{color:"black"}}>Login</a>   
