@@ -1,5 +1,6 @@
 import React, {  useState } from 'react'
 import {registerValidation} from "../utils/registerValidation"
+import {ParStyled, InputStyled, ButtonStyled } from "./formStyle"
 
 const Form = () => {
     const [values, setValues] = useState({
@@ -33,15 +34,15 @@ const Form = () => {
                 
                 }</p>
             <form onSubmit={handleSubmit}>
-                <input
+                <InputStyled
                     type="text"
                     name="firstName"
                     placeholder='First Name'
                     onChange={(e) => setValues({ ...values, firstName: e.target.value })}
                     value={values.firstName}
                 />
-                <p>{errorText?.firstName}</p>
-                <input
+                <ParStyled>{errorText?.firstName}</ParStyled>
+                <InputStyled
                     type="text"
                     name="lastName"
                     placeholder='Last Name'
@@ -49,8 +50,8 @@ const Form = () => {
                     onChange={(e) => setValues({ ...values, lastName: e.target.value })}
                     value={values.lastName}
                 />
-                <p>{errorText?.lastName}</p>
-                <input
+                <ParStyled>{errorText?.lastName}</ParStyled>
+                <InputStyled
                     type="email"
                     name="email"
                     placeholder='Email'
@@ -58,23 +59,23 @@ const Form = () => {
                     onChange={(e) => setValues({ ...values, email: e.target.value })}
                     value={values.email}
                 />
-                <p>{errorText?.email}</p>
-                <input
+                <ParStyled>{errorText?.email}</ParStyled>
+                <InputStyled
                     type="password"
                     name="password"
                     placeholder='Password'
                     onChange={(e) => setValues({ ...values, password: e.target.value })}
                     value={values.password}
                 />
-                <p>{errorText?.password}</p>
-                <input
+                <ParStyled>{errorText?.password}</ParStyled>
+                <InputStyled
                     type="password"
                     name="confirmPassword"
                     placeholder='Password Confirm'
                     onChange={(e) => setValues({ ...values, confirmPassword: e.target.value })}
                     value={values.confirmPassword}
                 />
-                <p>{errorText?.confirmPassword}</p>
+                <ParStyled>{errorText?.confirmPassword}</ParStyled>
                 <input
                     type="checkbox"
                     name="policy"
@@ -82,14 +83,14 @@ const Form = () => {
                  
                     onChange={(e) => setValues({ ...values, policy: e.target.checked })}
                 />
-                <p>{errorText?.firstName}</p>
+                <ParStyled>{errorText?.firstName}</ParStyled>
                 <span style={{fontSize:"1.2rem", paddingLeft:"0.5rem"}}>
-                    I accept the{" "} <a href='/' style={{color:"black"}}>Privacy Policy</a>.
+                    I accept the{" "} <a href='/' style={{color:"white"}}>Privacy Policy</a>.
                 </span>
-                <p>{errorText.policy}</p>
-                <button type='submit' value="Register">Register</button>
+                <ParStyled>{errorText.policy}</ParStyled>
+                <ButtonStyled type='submit' value="Register">Register</ButtonStyled>
                 <p style={{fontSize:"1rem"}}>Already have an account?
-                  <a href='/' style={{color:"black"}}>Login</a>   
+                  <a href='/' style={{color:"white"}}>Login</a>   
                 </p>
 
             </form>
