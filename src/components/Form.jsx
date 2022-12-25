@@ -76,6 +76,8 @@ const Form = () => {
                     value={values.confirmPassword}
                 />
                 <ParStyled>{errorText?.confirmPassword}</ParStyled>
+                <div className='checkbox'>
+
                 <input
                     type="checkbox"
                     name="policy"
@@ -87,6 +89,7 @@ const Form = () => {
                 <span style={{fontSize:"1.2rem", paddingLeft:"0.5rem"}}>
                     I accept the{" "} <a href='/' style={{color:"white"}}>Privacy Policy</a>.
                 </span>
+                </div>
                 <ParStyled>{errorText.policy}</ParStyled>
                 <ButtonStyled type='submit' value="Register">Register</ButtonStyled>
                 <p style={{fontSize:"1rem"}}>Already have an account?
